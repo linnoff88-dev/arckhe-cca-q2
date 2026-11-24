@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Camada 1 — Fundamentos | CCA-Q2</title>
+  <title>Camada 1 â€” Fundamentos | CCA-Q2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -349,7 +349,7 @@
 
   <nav class="nav" role="navigation" aria-label="Navegacao principal">
     <div class="container">
-      <div class="nav-brand-group"><a href="../../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://inema.club" target="_blank" class="nav-brand-site">INEMA.CLUB</a></div>
+      <div class="nav-brand-group"><a href="../../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://ARCKHÉ AI" target="_blank" class="nav-brand-site">ARCKHÉ AI</a></div>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -409,7 +409,7 @@
                       <h4>Conceito Central</h4>
                       <p>A API do Claude retorna um <code>stop_reason</code> que indica se o modelo terminou (<code>end_turn</code>) ou se quer usar uma ferramenta (<code>tool_use</code>). Esta e a base de todo sistema agentico.</p>
                     </div>
-                    <p>O modelo foi projetado para tomar decisoes sobre quais ferramentas usar e quando. Isso e chamado de <strong>model-driven decision-making</strong> — o modelo escolhe as ferramentas, nao uma arvore de decisoes pre-configurada.</p>
+                    <p>O modelo foi projetado para tomar decisoes sobre quais ferramentas usar e quando. Isso e chamado de <strong>model-driven decision-making</strong> â€” o modelo escolhe as ferramentas, nao uma arvore de decisoes pre-configurada.</p>
                   </div>
                 </div>
               </div>
@@ -426,10 +426,10 @@
                   <div class="exp-body-inner">
                     <p>O loop agentico e o conceito mais fundamental para o exame. Ele funciona assim:</p>
                     <ul>
-                      <li><strong>Enviar request</strong> — Voce envia a mensagem do usuario (com historico e definicoes de tools) para a API</li>
-                      <li><strong>Inspecionar stop_reason</strong> — Se <code>tool_use</code>, o modelo quer executar uma ferramenta. Se <code>end_turn</code>, o modelo terminou.</li>
-                      <li><strong>Executar tools</strong> — Voce executa a ferramenta solicitada no seu ambiente</li>
-                      <li><strong>Retornar resultados</strong> — Os resultados da ferramenta sao adicionados ao historico da conversa para o proximo passo de raciocinio</li>
+                      <li><strong>Enviar request</strong> â€” Voce envia a mensagem do usuario (com historico e definicoes de tools) para a API</li>
+                      <li><strong>Inspecionar stop_reason</strong> â€” Se <code>tool_use</code>, o modelo quer executar uma ferramenta. Se <code>end_turn</code>, o modelo terminou.</li>
+                      <li><strong>Executar tools</strong> â€” Voce executa a ferramenta solicitada no seu ambiente</li>
+                      <li><strong>Retornar resultados</strong> â€” Os resultados da ferramenta sao adicionados ao historico da conversa para o proximo passo de raciocinio</li>
                     </ul>
                     <p>O loop continua ate o modelo retornar <code>end_turn</code>. O modelo decide autonomamente quantas iteracoes sao necessarias.</p>
                     <div class="anti-pattern">
@@ -456,13 +456,13 @@
                     <p>As descricoes das ferramentas sao o <strong>mecanismo primario</strong> pelo qual o modelo seleciona qual ferramenta usar. Isso e crucial para o exame.</p>
                     <p>Uma boa descricao de ferramenta deve incluir:</p>
                     <ul>
-                      <li><strong>Formatos de input</strong> — Que tipo de dados a ferramenta aceita</li>
-                      <li><strong>Exemplos de uso</strong> — Queries tipicas que a ferramenta responde</li>
-                      <li><strong>Edge cases</strong> — Situacoes limites e como a ferramenta se comporta</li>
-                      <li><strong>Limites e boundaries</strong> — O que a ferramenta NAO faz</li>
+                      <li><strong>Formatos de input</strong> â€” Que tipo de dados a ferramenta aceita</li>
+                      <li><strong>Exemplos de uso</strong> â€” Queries tipicas que a ferramenta responde</li>
+                      <li><strong>Edge cases</strong> â€” Situacoes limites e como a ferramenta se comporta</li>
+                      <li><strong>Limites e boundaries</strong> â€” O que a ferramenta NAO faz</li>
                     </ul>
                     <div class="anti-pattern">
-                      <strong>Armadilha comum:</strong> Descricoes ambiguas ou sobrepostas entre ferramentas causam misrouting — o modelo escolhe a ferramenta errada. Se duas ferramentas parecem fazer a mesma coisa, o modelo vai se confundir.
+                      <strong>Armadilha comum:</strong> Descricoes ambiguas ou sobrepostas entre ferramentas causam misrouting â€” o modelo escolhe a ferramenta errada. Se duas ferramentas parecem fazer a mesma coisa, o modelo vai se confundir.
                     </div>
                     <p>Quando o numero de ferramentas aumenta (ex: 18 vs 4-5), a confiabilidade da selecao cai drasticamente. Prefira poucos tools bem definidos.</p>
                   </div>
@@ -500,7 +500,7 @@
             <div class="next-teaser">
               <div>
                 <h4>Proxima camada</h4>
-                <p><strong>Camada 2 — Estrutura:</strong> CLAUDE.md, commands, skills, few-shot e JSON schemas. Transforme seu chatbot em um extrator de dados estruturados.</p>
+                <p><strong>Camada 2 â€” Estrutura:</strong> CLAUDE.md, commands, skills, few-shot e JSON schemas. Transforme seu chatbot em um extrator de dados estruturados.</p>
               </div>
               <a href="../camada-2/index.html" class="btn btn-secondary">
                 Camada 2
@@ -545,7 +545,7 @@
             Anterior
           </span>
           <a href="../camada-2/index.html">
-            Camada 2 — Estrutura
+            Camada 2 â€” Estrutura
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </div>

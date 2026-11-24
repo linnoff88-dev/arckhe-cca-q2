@@ -15,7 +15,7 @@
 <body>
   <nav class="nav">
     <div class="container">
-      <div class="nav-brand-group"><a href="../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://inema.club" target="_blank" class="nav-brand-site">INEMA.CLUB</a></div>
+      <div class="nav-brand-group"><a href="../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://ARCKHÉ AI" target="_blank" class="nav-brand-site">ARCKHÉ AI</a></div>
       <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
       <ul class="nav-links">
         <li><a href="../index.html">Inicio</a></li>
@@ -63,7 +63,7 @@
 
   <footer class="footer">
     <div class="container">
-      CCA-Q2 — Material de estudo para Claude Certified Architect
+      CCA-Q2 â€” Material de estudo para Claude Certified Architect
     </div>
   </footer>
 
@@ -91,7 +91,7 @@
           "Criar scripts bash equivalentes"
         ],
         correct: 0,
-        explanation: "O diretorio .claude/commands/ no repositorio e o local correto para comandos compartilhados — e versionado com git e disponivel para todo o time. O diretorio home (~/.claude/commands/) e pessoal e nao e compartilhado. Instrucoes no CLAUDE.md nao sao comandos executaveis. Scripts bash nao se integram com o sistema de comandos do Claude Code."
+        explanation: "O diretorio .claude/commands/ no repositorio e o local correto para comandos compartilhados â€” e versionado com git e disponivel para todo o time. O diretorio home (~/.claude/commands/) e pessoal e nao e compartilhado. Instrucoes no CLAUDE.md nao sao comandos executaveis. Scripts bash nao se integram com o sistema de comandos do Claude Code."
       },
       {
         context: "Um desenvolvedor criou uma Skill customizada que precisa rodar de forma isolada, sem herdar o contexto da conversa principal. A Skill faz analise de seguranca e nao deve ser influenciada por instrucoes anteriores na sessao.",
@@ -103,7 +103,7 @@
           "Usar /compact para limpar o contexto antes de rodar"
         ],
         correct: 1,
-        explanation: "O SKILL.md com context: fork cria um fork da sessao, isolando o contexto da Skill do contexto principal. --resume continua uma sessao existente, nao isola. Novo terminal e manual e nao preserva a integracao. /compact reduz o contexto mas nao isola — instrucoes anteriores ainda podem influenciar."
+        explanation: "O SKILL.md com context: fork cria um fork da sessao, isolando o contexto da Skill do contexto principal. --resume continua uma sessao existente, nao isola. Novo terminal e manual e nao preserva a integracao. /compact reduz o contexto mas nao isola â€” instrucoes anteriores ainda podem influenciar."
       },
       {
         context: "O time usa MCP servers para integrar com ferramentas internas (Jira, banco de dados staging, deploy). Alguns servers sao do time (Jira, staging DB) e devem ser compartilhados. Outros sao pessoais (servidor de notas do dev).",
@@ -115,7 +115,7 @@
           "Documentar no CLAUDE.md para configuracao manual"
         ],
         correct: 1,
-        explanation: "O .mcp.json no repositorio e para MCP servers compartilhados do time — versionado e consistente. O ~/.claude.json e para configuracoes pessoais do usuario. Misturar servidores pessoais no .mcp.json do projeto polui a configuracao compartilhada. Variaveis de ambiente e CLAUDE.md nao sao os mecanismos corretos para configurar MCP servers."
+        explanation: "O .mcp.json no repositorio e para MCP servers compartilhados do time â€” versionado e consistente. O ~/.claude.json e para configuracoes pessoais do usuario. Misturar servidores pessoais no .mcp.json do projeto polui a configuracao compartilhada. Variaveis de ambiente e CLAUDE.md nao sao os mecanismos corretos para configurar MCP servers."
       }
     ];
 

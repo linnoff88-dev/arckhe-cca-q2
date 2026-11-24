@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CCA-Q2 — Claude Certified Architect | Preparatorio Interativo</title>
+  <title>CCA-Q2 â€” Claude Certified Architect | Preparatorio Interativo</title>
   <meta name="description" content="Preparatorio interativo para o exame Claude Certified Architect. Aprendizado progressivo com mapa visual, cenarios e flashcards.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* ── Landing Page Styles ── */
+    /* â”€â”€ Landing Page Styles â”€â”€ */
 
     /* Scroll progress bar */
     .scroll-progress { width: 0%; }
@@ -429,7 +429,7 @@
       }
     }
 
-    /* ── Chat Widget Styles ── */
+    /* â”€â”€ Chat Widget Styles â”€â”€ */
     .chat-section {
       padding: var(--space-2xl) 0;
     }
@@ -580,7 +580,7 @@
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Navegacao principal">
     <div class="container">
-      <div class="nav-brand-group"><a href="index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://inema.club" target="_blank" class="nav-brand-site">INEMA.CLUB</a></div>
+      <div class="nav-brand-group"><a href="index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://ARCKHÉ AI" target="_blank" class="nav-brand-site">ARCKHÉ AI</a></div>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -633,7 +633,7 @@
             <p>Pergunte sobre qualquer topico do exame CCA-F</p>
           </div>
           <div class="chat-messages" id="chatMessages">
-            <div class="chat-msg assistant">Ola! Sou o assistente de estudos CCA. Pergunte sobre qualquer topico do exame — loop agentico, hooks, multi-agente, ferramentas, MCP, CLAUDE.md e muito mais.</div>
+            <div class="chat-msg assistant">Ola! Sou o assistente de estudos CCA. Pergunte sobre qualquer topico do exame â€” loop agentico, hooks, multi-agente, ferramentas, MCP, CLAUDE.md e muito mais.</div>
           </div>
           <div class="chat-chips" id="chatChips">
             <button class="chat-chip" data-question="O que sao hooks?">O que sao hooks?</button>
@@ -869,7 +869,7 @@
           <div class="card rule-card">
             <span class="rule-number">02</span>
             <h3>Erros Estruturados Sempre</h3>
-            <p>Toda ferramenta deve retornar erros em formato estruturado. Nunca lance excecoes genericas — o agente precisa entender e reagir ao erro.</p>
+            <p>Toda ferramenta deve retornar erros em formato estruturado. Nunca lance excecoes genericas â€” o agente precisa entender e reagir ao erro.</p>
           </div>
 
           <div class="card rule-card">
@@ -898,14 +898,14 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>CCA-Q2 — Preparatorio para Claude Certified Architect</p>
+      <p>CCA-Q2 â€” Preparatorio para Claude Certified Architect</p>
       <p>Desenvolvido como material de estudo independente. Nao afiliado a Anthropic.</p>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script>
-    // ── Nav toggle (mobile) ──
+    // â”€â”€ Nav toggle (mobile) â”€â”€
     (function() {
       var toggle = document.getElementById('navToggle');
       var links = document.getElementById('navLinks');
@@ -924,7 +924,7 @@
       });
     })();
 
-    // ── Scroll progress bar ──
+    // â”€â”€ Scroll progress bar â”€â”€
     (function() {
       var bar = document.getElementById('scrollProgress');
       window.addEventListener('scroll', function() {
@@ -935,7 +935,7 @@
       }, { passive: true });
     })();
 
-    // ── Reveal on scroll (IntersectionObserver) ──
+    // â”€â”€ Reveal on scroll (IntersectionObserver) â”€â”€
     (function() {
       var reveals = document.querySelectorAll('.reveal');
       if (!('IntersectionObserver' in window)) {
@@ -956,7 +956,7 @@
       reveals.forEach(function(el) { observer.observe(el); });
     })();
 
-    // ── Animate domain progress bars when visible ──
+    // â”€â”€ Animate domain progress bars when visible â”€â”€
     (function() {
       var bars = document.querySelectorAll('.domain-bar[data-width]');
       if (!('IntersectionObserver' in window)) {
@@ -980,7 +980,7 @@
       bars.forEach(function(bar) { observer.observe(bar); });
     })();
 
-    // ── Study Chat Widget ──
+    // â”€â”€ Study Chat Widget â”€â”€
     (function() {
       var messages = document.getElementById('chatMessages');
       var input = document.getElementById('chatInput');
@@ -994,7 +994,7 @@
         },
         {
           keys: ['hook', 'prompt', 'compliance'],
-          text: 'Regra de Ouro #1: Hooks > Prompts. Hooks (PreToolUse, PostToolUse, Notification) sao deterministicos e auditaveis — executam scripts reais antes ou depois de cada chamada de ferramenta. Ja instrucoes em prompt dependem da interpretacao do modelo e podem ser ignoradas. Para compliance e seguranca, sempre prefira hooks.'
+          text: 'Regra de Ouro #1: Hooks > Prompts. Hooks (PreToolUse, PostToolUse, Notification) sao deterministicos e auditaveis â€” executam scripts reais antes ou depois de cada chamada de ferramenta. Ja instrucoes em prompt dependem da interpretacao do modelo e podem ser ignoradas. Para compliance e seguranca, sempre prefira hooks.'
         },
         {
           keys: ['multi', 'agente', 'hub', 'spoke'],
@@ -1010,7 +1010,7 @@
         },
         {
           keys: ['claude.md', 'configuracao'],
-          text: 'CLAUDE.md segue uma hierarquia de 3 niveis: (1) ~/.claude/CLAUDE.md — configuracao global do usuario, (2) ./CLAUDE.md na raiz do projeto — compartilhado via repositorio, (3) ./subpasta/CLAUDE.md — regras especificas para aquele contexto. Niveis mais especificos sobrescrevem os mais gerais. Use para definir convencoes, padroes e instrucoes persistentes.'
+          text: 'CLAUDE.md segue uma hierarquia de 3 niveis: (1) ~/.claude/CLAUDE.md â€” configuracao global do usuario, (2) ./CLAUDE.md na raiz do projeto â€” compartilhado via repositorio, (3) ./subpasta/CLAUDE.md â€” regras especificas para aquele contexto. Niveis mais especificos sobrescrevem os mais gerais. Use para definir convencoes, padroes e instrucoes persistentes.'
         },
         {
           keys: ['command', 'skill'],
@@ -1018,7 +1018,7 @@
         },
         {
           keys: ['plan', 'mode'],
-          text: 'Plan mode (shift+tab para alternar) faz o agente planejar sem executar — ideal para tarefas complexas onde voce quer revisar a estrategia antes. No modo de execucao direta, o agente age imediatamente. A boa pratica e: planejar primeiro em tarefas de alto risco, executar direto em tarefas simples e bem definidas.'
+          text: 'Plan mode (shift+tab para alternar) faz o agente planejar sem executar â€” ideal para tarefas complexas onde voce quer revisar a estrategia antes. No modo de execucao direta, o agente age imediatamente. A boa pratica e: planejar primeiro em tarefas de alto risco, executar direto em tarefas simples e bem definidas.'
         },
         {
           keys: ['few-shot', 'exemplo'],
@@ -1038,7 +1038,7 @@
         },
         {
           keys: ['review', 'instancia'],
-          text: 'Regra de Ouro #4: Revisao Independente. Para saidas criticas, use um segundo agente (ou instancia separada) para validar. O revisor nao tem acesso ao raciocinio do primeiro agente — avalia apenas o resultado. Isso evita vies de confirmacao. Em CI/CD, pode ser um step separado no pipeline.'
+          text: 'Regra de Ouro #4: Revisao Independente. Para saidas criticas, use um segundo agente (ou instancia separada) para validar. O revisor nao tem acesso ao raciocinio do primeiro agente â€” avalia apenas o resultado. Isso evita vies de confirmacao. Em CI/CD, pode ser um step separado no pipeline.'
         },
         {
           keys: ['contexto', 'lost', 'middle'],
@@ -1046,7 +1046,7 @@
         },
         {
           keys: ['escala', 'escalacao'],
-          text: 'Padroes de escalacao: (1) Agente detecta que esta fora do escopo e escala ao orquestrador, (2) Limites de iteracao atingidos — retorna resultado parcial com status, (3) Erro critico — retorna erro estruturado para decisao humana. Sempre defina criterios claros de escalacao para evitar loops infinitos.'
+          text: 'Padroes de escalacao: (1) Agente detecta que esta fora do escopo e escala ao orquestrador, (2) Limites de iteracao atingidos â€” retorna resultado parcial com status, (3) Erro critico â€” retorna erro estruturado para decisao humana. Sempre defina criterios claros de escalacao para evitar loops infinitos.'
         },
         {
           keys: ['erro', 'error'],
@@ -1058,7 +1058,7 @@
         },
         {
           keys: ['regra', 'ouro', 'golden'],
-          text: 'As 5 Regras de Ouro do CCA:\n1. Hooks > Prompts — prefira mecanismos deterministicos\n2. Erros Estruturados Sempre — nunca excecoes genericas\n3. 4-5 Ferramentas por Agente — escopo focado\n4. Revisao Independente — segundo agente valida saidas criticas\n5. Exemplos > Instrucoes — few-shot supera descricoes longas'
+          text: 'As 5 Regras de Ouro do CCA:\n1. Hooks > Prompts â€” prefira mecanismos deterministicos\n2. Erros Estruturados Sempre â€” nunca excecoes genericas\n3. 4-5 Ferramentas por Agente â€” escopo focado\n4. Revisao Independente â€” segundo agente valida saidas criticas\n5. Exemplos > Instrucoes â€” few-shot supera descricoes longas'
         },
         {
           keys: ['exame', 'prova', 'certificacao'],
@@ -1066,7 +1066,7 @@
         },
         {
           keys: ['dominio', 'peso'],
-          text: 'Os 5 dominios e seus pesos:\n1. Arquitetura Agentica e Orquestracao — 27%\n2. Configuracao e Fluxos do Claude Code — 20%\n3. Engenharia de Prompt e Saida Estruturada — 20%\n4. Design de Ferramentas e Integracao MCP — 18%\n5. Gerenciamento de Contexto e Confiabilidade — 15%'
+          text: 'Os 5 dominios e seus pesos:\n1. Arquitetura Agentica e Orquestracao â€” 27%\n2. Configuracao e Fluxos do Claude Code â€” 20%\n3. Engenharia de Prompt e Saida Estruturada â€” 20%\n4. Design de Ferramentas e Integracao MCP â€” 18%\n5. Gerenciamento de Contexto e Confiabilidade â€” 15%'
         }
       ];
 

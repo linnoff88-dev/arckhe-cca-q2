@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Camada 3 — Confiabilidade | CCA-Q2</title>
+  <title>Camada 3 â€” Confiabilidade | CCA-Q2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -309,7 +309,7 @@
 
   <nav class="nav" role="navigation" aria-label="Navegacao principal">
     <div class="container">
-      <div class="nav-brand-group"><a href="../../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://inema.club" target="_blank" class="nav-brand-site">INEMA.CLUB</a></div>
+      <div class="nav-brand-group"><a href="../../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://ARCKHÉ AI" target="_blank" class="nav-brand-site">ARCKHÉ AI</a></div>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -370,12 +370,12 @@
                     <p>Hooks do Agent SDK interceptam chamadas de ferramentas de forma programatica. O tipo mais importante e o <code>PostToolUse</code>, que intercepta resultados de ferramentas antes que o modelo os processe.</p>
                     <p>Casos de uso de hooks:</p>
                     <ul>
-                      <li><strong>Normalizacao de dados</strong> — Converter timestamps para ISO 8601, padronizar status codes, formatar valores monetarios</li>
-                      <li><strong>Bloqueio por politica</strong> — Bloquear reembolsos acima de um threshold, impedir acesso a dados sensiveis</li>
-                      <li><strong>Auditoria</strong> — Registrar todas as chamadas de ferramentas para compliance</li>
+                      <li><strong>Normalizacao de dados</strong> â€” Converter timestamps para ISO 8601, padronizar status codes, formatar valores monetarios</li>
+                      <li><strong>Bloqueio por politica</strong> â€” Bloquear reembolsos acima de um threshold, impedir acesso a dados sensiveis</li>
+                      <li><strong>Auditoria</strong> â€” Registrar todas as chamadas de ferramentas para compliance</li>
                     </ul>
                     <div class="anti-pattern">
-                      <strong>Anti-pattern critico:</strong> Usar prompts para compliance financeira. "Por favor, nao permita reembolsos acima de R$500" no prompt e probabilistico — o modelo pode ignorar. Um hook que bloqueia a chamada e deterministico.
+                      <strong>Anti-pattern critico:</strong> Usar prompts para compliance financeira. "Por favor, nao permita reembolsos acima de R$500" no prompt e probabilistico â€” o modelo pode ignorar. Um hook que bloqueia a chamada e deterministico.
                     </div>
                   </div>
                 </div>
@@ -421,10 +421,10 @@
                     <p>Erros genericos sao um anti-pattern grave. O modelo precisa de contexto estruturado para tomar decisoes inteligentes de recuperacao.</p>
                     <p>Todo erro deve incluir:</p>
                     <ul>
-                      <li><code>errorCategory</code> — transient (timeout), validation (input invalido), business (politica), permission</li>
-                      <li><code>isRetryable</code> — boolean indicando se vale a pena tentar novamente</li>
-                      <li><strong>Resultados parciais</strong> — O que ja foi obtido antes da falha</li>
-                      <li><strong>Alternativas</strong> — Outras abordagens que o modelo pode tentar</li>
+                      <li><code>errorCategory</code> â€” transient (timeout), validation (input invalido), business (politica), permission</li>
+                      <li><code>isRetryable</code> â€” boolean indicando se vale a pena tentar novamente</li>
+                      <li><strong>Resultados parciais</strong> â€” O que ja foi obtido antes da falha</li>
+                      <li><strong>Alternativas</strong> â€” Outras abordagens que o modelo pode tentar</li>
                     </ul>
                     <p>A flag <code>isError</code> sinaliza para o modelo que a resposta da ferramenta representa uma falha, nao um resultado valido.</p>
                     <div class="anti-pattern">
@@ -446,9 +446,9 @@
                   <div class="exp-body-inner">
                     <p>O contexto e o recurso mais precioso e fragil de um agente. Tres problemas centrais:</p>
                     <ul>
-                      <li><strong>Lost in the middle</strong> — Modelos processam bem o inicio e o fim do contexto, mas podem omitir informacoes do meio. Coloque fatos criticos no inicio ou use section headers.</li>
-                      <li><strong>Progressive summarization</strong> — Resumos perdem valores numericos, datas e expectativas especificas. Extraia fatos transacionais para um bloco persistente de "case facts".</li>
-                      <li><strong>Tool results accumulation</strong> — Resultados de ferramentas acumulam tokens sem proporcao com sua relevancia. Corte outputs verbosos.</li>
+                      <li><strong>Lost in the middle</strong> â€” Modelos processam bem o inicio e o fim do contexto, mas podem omitir informacoes do meio. Coloque fatos criticos no inicio ou use section headers.</li>
+                      <li><strong>Progressive summarization</strong> â€” Resumos perdem valores numericos, datas e expectativas especificas. Extraia fatos transacionais para um bloco persistente de "case facts".</li>
+                      <li><strong>Tool results accumulation</strong> â€” Resultados de ferramentas acumulam tokens sem proporcao com sua relevancia. Corte outputs verbosos.</li>
                     </ul>
                     <div class="concept-box">
                       <h4>Padrao Recomendado</h4>
@@ -470,10 +470,10 @@
                   <div class="exp-body-inner">
                     <p>Evolua o extrator da Camada 2 para um agente de suporte ao cliente com garantias de confiabilidade:</p>
                     <ul>
-                      <li><strong>Compliance via hooks</strong> — PostToolUse para bloquear reembolsos acima do limite e normalizar dados do cliente</li>
-                      <li><strong>Escalation patterns</strong> — Criterios explicitos para escalar: cliente pede humano, lacuna de politica, incapacidade de progredir</li>
-                      <li><strong>Handoff estruturado</strong> — Ao escalar, incluir: detalhes do cliente, causa raiz, acoes tomadas, recomendacoes</li>
-                      <li><strong>Erros com contexto</strong> — Cada falha de ferramenta retorna errorCategory, isRetryable e alternativas</li>
+                      <li><strong>Compliance via hooks</strong> â€” PostToolUse para bloquear reembolsos acima do limite e normalizar dados do cliente</li>
+                      <li><strong>Escalation patterns</strong> â€” Criterios explicitos para escalar: cliente pede humano, lacuna de politica, incapacidade de progredir</li>
+                      <li><strong>Handoff estruturado</strong> â€” Ao escalar, incluir: detalhes do cliente, causa raiz, acoes tomadas, recomendacoes</li>
+                      <li><strong>Erros com contexto</strong> â€” Cada falha de ferramenta retorna errorCategory, isRetryable e alternativas</li>
                     </ul>
                     <div class="concept-box">
                       <h4>Evolucao do Projeto</h4>
@@ -487,7 +487,7 @@
             <div class="next-teaser">
               <div>
                 <h4>Proxima camada</h4>
-                <p><strong>Camada 4 — Escala:</strong> Multi-agente hub-and-spoke, MCP servers, CI/CD e revisao independente.</p>
+                <p><strong>Camada 4 â€” Escala:</strong> Multi-agente hub-and-spoke, MCP servers, CI/CD e revisao independente.</p>
               </div>
               <a href="../camada-4/index.html" class="btn btn-secondary">
                 Camada 4
@@ -531,10 +531,10 @@
         <div class="bottom-nav">
           <a href="../camada-2/index.html">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-            Camada 2 — Estrutura
+            Camada 2 â€” Estrutura
           </a>
           <a href="../camada-4/index.html">
-            Camada 4 — Escala
+            Camada 4 â€” Escala
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Camada 4 — Escala | CCA-Q2</title>
+  <title>Camada 4 â€” Escala | CCA-Q2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -299,7 +299,7 @@
 
   <nav class="nav" role="navigation" aria-label="Navegacao principal">
     <div class="container">
-      <div class="nav-brand-group"><a href="../../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://inema.club" target="_blank" class="nav-brand-site">INEMA.CLUB</a></div>
+      <div class="nav-brand-group"><a href="../../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://ARCKHÉ AI" target="_blank" class="nav-brand-site">ARCKHÉ AI</a></div>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -357,17 +357,17 @@
                     <p>A arquitetura hub-and-spoke e o padrao central para sistemas multi-agente no exame. O coordenador (hub) gerencia toda a comunicacao entre subagentes (spokes).</p>
                     <p>Principios fundamentais:</p>
                     <ul>
-                      <li><strong>Coordenador gerencia comunicacao</strong> — Subagentes nunca se comunicam diretamente entre si. Tudo passa pelo coordenador.</li>
-                      <li><strong>Subagentes isolados</strong> — Cada subagente tem contexto isolado. Nao herdam o historico do coordenador automaticamente.</li>
-                      <li><strong>Contexto explicito</strong> — Ao invocar um subagente, inclua todas as informacoes necessarias na mensagem. Nada e implicito.</li>
-                      <li><strong>Tool Agent</strong> — Use a ferramenta <code>Agent</code> (antes chamada <code>Task</code>) para spawnar subagentes. <code>allowedTools</code> deve incluir "Agent" para o coordenador.</li>
+                      <li><strong>Coordenador gerencia comunicacao</strong> â€” Subagentes nunca se comunicam diretamente entre si. Tudo passa pelo coordenador.</li>
+                      <li><strong>Subagentes isolados</strong> â€” Cada subagente tem contexto isolado. Nao herdam o historico do coordenador automaticamente.</li>
+                      <li><strong>Contexto explicito</strong> â€” Ao invocar um subagente, inclua todas as informacoes necessarias na mensagem. Nada e implicito.</li>
+                      <li><strong>Tool Agent</strong> â€” Use a ferramenta <code>Agent</code> (antes chamada <code>Task</code>) para spawnar subagentes. <code>allowedTools</code> deve incluir "Agent" para o coordenador.</li>
                     </ul>
                     <div class="anti-pattern">
                       <strong>Risco comum:</strong> Decomposicao excessivamente restrita gera lacunas de cobertura. Se cada subagente recebe um escopo muito estreito, ninguem olha para as intersecoes. O coordenador deve decompor com sobreposicao suficiente.
                     </div>
                     <div class="concept-box">
                       <h4>Para o Exame</h4>
-                      <p>Questoes sobre subagentes herdando contexto: a resposta e sempre NAO — contexto deve ser explicito. Questoes sobre comunicacao entre subagentes: tudo passa pelo coordenador.</p>
+                      <p>Questoes sobre subagentes herdando contexto: a resposta e sempre NAO â€” contexto deve ser explicito. Questoes sobre comunicacao entre subagentes: tudo passa pelo coordenador.</p>
                     </div>
                   </div>
                 </div>
@@ -386,11 +386,11 @@
                     <p>MCP (Model Context Protocol) servers estendem as capacidades do Claude Code com ferramentas externas.</p>
                     <p>Dois niveis de configuracao:</p>
                     <ul>
-                      <li><code>.mcp.json</code> — Nivel de projeto, versionado no repositorio. Servidores compartilhados com o time.</li>
-                      <li><code>~/.claude.json</code> — Nivel pessoal. Servidores de uso individual, nao versionados.</li>
+                      <li><code>.mcp.json</code> â€” Nivel de projeto, versionado no repositorio. Servidores compartilhados com o time.</li>
+                      <li><code>~/.claude.json</code> â€” Nivel pessoal. Servidores de uso individual, nao versionados.</li>
                     </ul>
                     <p>Credenciais usam expansao de variaveis de ambiente: <code>${GITHUB_TOKEN}</code>, <code>${DATABASE_URL}</code>. Nunca hardcode tokens em arquivos de configuracao.</p>
-                    <p>MCP Resources fornecem catalogos de conteudo — resumos de issues, schemas de banco de dados — que o modelo pode consultar sem executar queries.</p>
+                    <p>MCP Resources fornecem catalogos de conteudo â€” resumos de issues, schemas de banco de dados â€” que o modelo pode consultar sem executar queries.</p>
                     <div class="concept-box">
                       <h4>Para o Exame</h4>
                       <p>MCP compartilhado com o time: <code>.mcp.json</code>. MCP pessoal: <code>~/.claude.json</code>. Community servers para integracoes padrao (GitHub, Jira, etc).</p>
@@ -411,10 +411,10 @@
                   <div class="exp-body-inner">
                     <p>Claude Code pode ser integrado em pipelines de CI/CD para automacao de code reviews, geracao de testes e feedback em PRs.</p>
                     <ul>
-                      <li><code>-p</code> flag — Modo nao-interativo, essencial para CI. Sem este flag, Claude Code espera input do terminal.</li>
-                      <li><code>--output-format json</code> — Saida estruturada para processamento automatizado. Combine com <code>--json-schema</code> para validacao.</li>
-                      <li><strong>CLAUDE.md em CI</strong> — Fornece contexto para a instancia CI do Claude Code (padroes de codigo, convencoes do projeto).</li>
-                      <li><strong>Session isolation</strong> — A instancia que gera codigo deve ser diferente da que revisa. Self-review e ineficaz.</li>
+                      <li><code>-p</code> flag â€” Modo nao-interativo, essencial para CI. Sem este flag, Claude Code espera input do terminal.</li>
+                      <li><code>--output-format json</code> â€” Saida estruturada para processamento automatizado. Combine com <code>--json-schema</code> para validacao.</li>
+                      <li><strong>CLAUDE.md em CI</strong> â€” Fornece contexto para a instancia CI do Claude Code (padroes de codigo, convencoes do projeto).</li>
+                      <li><strong>Session isolation</strong> â€” A instancia que gera codigo deve ser diferente da que revisa. Self-review e ineficaz.</li>
                     </ul>
                     <div class="concept-box">
                       <h4>Padrao de Integracao</h4>
@@ -441,9 +441,9 @@
                     </div>
                     <p>Para code review em larga escala, use o padrao multi-pass:</p>
                     <ul>
-                      <li><strong>Per-file pass</strong> — Analise local de cada arquivo individualmente</li>
-                      <li><strong>Cross-file pass</strong> — Integracao dos findings, verificando consistencia entre arquivos</li>
-                      <li><strong>Verification pass</strong> — Scores de confianca para priorizar revisao humana</li>
+                      <li><strong>Per-file pass</strong> â€” Analise local de cada arquivo individualmente</li>
+                      <li><strong>Cross-file pass</strong> â€” Integracao dos findings, verificando consistencia entre arquivos</li>
+                      <li><strong>Verification pass</strong> â€” Scores de confianca para priorizar revisao humana</li>
                     </ul>
                     <div class="anti-pattern">
                       <strong>Anti-pattern:</strong> Pedir ao mesmo Claude que gerou o codigo para revisar o proprio codigo. O modelo tende a defender suas escolhas em vez de questiona-las.
@@ -464,10 +464,10 @@
                   <div class="exp-body-inner">
                     <p>Evolua o agente de suporte da Camada 3 para um sistema de pesquisa multi-agente:</p>
                     <ul>
-                      <li><strong>Coordenador</strong> — Recebe a query de pesquisa, decompoe em subtarefas, delega para subagentes, agrega resultados</li>
-                      <li><strong>Subagente de busca</strong> — Executa web search e coleta fontes</li>
-                      <li><strong>Subagente de analise</strong> — Analisa documentos e extrai dados estruturados</li>
-                      <li><strong>Subagente de sintese</strong> — Combina resultados com atribuicao de fontes</li>
+                      <li><strong>Coordenador</strong> â€” Recebe a query de pesquisa, decompoe em subtarefas, delega para subagentes, agrega resultados</li>
+                      <li><strong>Subagente de busca</strong> â€” Executa web search e coleta fontes</li>
+                      <li><strong>Subagente de analise</strong> â€” Analisa documentos e extrai dados estruturados</li>
+                      <li><strong>Subagente de sintese</strong> â€” Combina resultados com atribuicao de fontes</li>
                     </ul>
                     <p>Integre MCP servers para acesso a APIs externas via <code>.mcp.json</code>. Configure CI/CD para revisao automatica dos relatorios gerados.</p>
                     <div class="concept-box">
@@ -482,7 +482,7 @@
             <div class="next-teaser">
               <div>
                 <h4>Proxima camada</h4>
-                <p><strong>Camada 5 — Simulado:</strong> Revisao das regras de ouro, quiz por dominio e dicas para o exame. Consolide tudo.</p>
+                <p><strong>Camada 5 â€” Simulado:</strong> Revisao das regras de ouro, quiz por dominio e dicas para o exame. Consolide tudo.</p>
               </div>
               <a href="../camada-5/index.html" class="btn btn-secondary">
                 Camada 5
@@ -525,10 +525,10 @@
         <div class="bottom-nav">
           <a href="../camada-3/index.html">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-            Camada 3 — Confiabilidade
+            Camada 3 â€” Confiabilidade
           </a>
           <a href="../camada-5/index.html">
-            Camada 5 — Simulado
+            Camada 5 â€” Simulado
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </div>

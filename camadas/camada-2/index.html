@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Camada 2 — Estrutura | CCA-Q2</title>
+  <title>Camada 2 â€” Estrutura | CCA-Q2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -295,7 +295,7 @@
 
   <nav class="nav" role="navigation" aria-label="Navegacao principal">
     <div class="container">
-      <div class="nav-brand-group"><a href="../../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://inema.club" target="_blank" class="nav-brand-site">INEMA.CLUB</a></div>
+      <div class="nav-brand-group"><a href="../../index.html" class="nav-brand">CCA<span>-Q2</span></a><span class="nav-brand-sep">|</span><a href="https://ARCKHÉ AI" target="_blank" class="nav-brand-site">ARCKHÉ AI</a></div>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -352,15 +352,15 @@
                     <p>O CLAUDE.md e o arquivo de configuracao central do Claude Code. Ele define regras, convencoes e contexto que o modelo segue durante toda a sessao.</p>
                     <p>A hierarquia de configuracao segue tres niveis:</p>
                     <ul>
-                      <li><strong>User-level</strong> — <code>~/.claude/CLAUDE.md</code> — Preferencias pessoais que se aplicam a todos os projetos</li>
-                      <li><strong>Projeto</strong> — <code>.claude/CLAUDE.md</code> ou raiz do projeto — Convencoes compartilhadas com o time</li>
-                      <li><strong>Diretorio</strong> — CLAUDE.md em subdiretorios — Regras especificas por contexto</li>
+                      <li><strong>User-level</strong> â€” <code>~/.claude/CLAUDE.md</code> â€” Preferencias pessoais que se aplicam a todos os projetos</li>
+                      <li><strong>Projeto</strong> â€” <code>.claude/CLAUDE.md</code> ou raiz do projeto â€” Convencoes compartilhadas com o time</li>
+                      <li><strong>Diretorio</strong> â€” CLAUDE.md em subdiretorios â€” Regras especificas por contexto</li>
                     </ul>
                     <div class="concept-box">
                       <h4>Modularizacao</h4>
                       <p>Use <code>@import</code> para referenciar outros arquivos de configuracao. Para regras por topico, use <code>.claude/rules/</code> com arquivos separados. O comando <code>/memory</code> adiciona notas persistentes.</p>
                     </div>
-                    <p>Regras path-specific usam frontmatter YAML com campo <code>paths</code> em arquivos dentro de <code>.claude/rules/</code>. Isso permite carregar convencoes condicionalmente — por exemplo, regras de Terraform so quando editando arquivos <code>terraform/**/*</code>.</p>
+                    <p>Regras path-specific usam frontmatter YAML com campo <code>paths</code> em arquivos dentro de <code>.claude/rules/</code>. Isso permite carregar convencoes condicionalmente â€” por exemplo, regras de Terraform so quando editando arquivos <code>terraform/**/*</code>.</p>
                   </div>
                 </div>
               </div>
@@ -377,14 +377,14 @@
                   <div class="exp-body-inner">
                     <p>Commands sao slash commands personalizados que automatizam tarefas repetitivas:</p>
                     <ul>
-                      <li><strong>Projeto</strong> — <code>.claude/commands/</code> — Versionados no repositorio, compartilhados com o time</li>
-                      <li><strong>Pessoal</strong> — <code>~/.claude/commands/</code> — Atalhos individuais, nao versionados</li>
+                      <li><strong>Projeto</strong> â€” <code>.claude/commands/</code> â€” Versionados no repositorio, compartilhados com o time</li>
+                      <li><strong>Pessoal</strong> â€” <code>~/.claude/commands/</code> â€” Atalhos individuais, nao versionados</li>
                     </ul>
                     <p>Skills sao uma evolucao dos commands, definidos em <code>.claude/skills/</code> com um arquivo <code>SKILL.md</code>. O frontmatter suporta configuracoes avancadas:</p>
                     <ul>
-                      <li><code>context: fork</code> — Executa a skill em um fork isolado da sessao, sem poluir o contexto principal</li>
-                      <li><code>allowed-tools</code> — Restringe quais ferramentas a skill pode usar</li>
-                      <li><code>argument-hint</code> — Texto que aparece como dica para o usuario sobre qual parametro fornecer</li>
+                      <li><code>context: fork</code> â€” Executa a skill em um fork isolado da sessao, sem poluir o contexto principal</li>
+                      <li><code>allowed-tools</code> â€” Restringe quais ferramentas a skill pode usar</li>
+                      <li><code>argument-hint</code> â€” Texto que aparece como dica para o usuario sobre qual parametro fornecer</li>
                     </ul>
                     <div class="concept-box">
                       <h4>Para o Exame</h4>
@@ -413,9 +413,9 @@
                     </ul>
                     <p>Para saida estruturada, <code>tool_use</code> com JSON schemas e o metodo mais confiavel:</p>
                     <ul>
-                      <li><code>tool_choice: "auto"</code> — Modelo pode retornar texto ou chamar tool</li>
-                      <li><code>tool_choice: "any"</code> — Modelo deve chamar alguma tool (garante estrutura)</li>
-                      <li><code>tool_choice: forced</code> — Modelo deve chamar uma tool especifica</li>
+                      <li><code>tool_choice: "auto"</code> â€” Modelo pode retornar texto ou chamar tool</li>
+                      <li><code>tool_choice: "any"</code> â€” Modelo deve chamar alguma tool (garante estrutura)</li>
+                      <li><code>tool_choice: forced</code> â€” Modelo deve chamar uma tool especifica</li>
                     </ul>
                     <div class="anti-pattern">
                       <strong>Atencao:</strong> JSON schemas eliminam erros de sintaxe, mas NAO erros semanticos. O modelo pode gerar JSON valido com dados incorretos. Validacao semantica ainda e necessaria.
@@ -454,7 +454,7 @@
             <div class="next-teaser">
               <div>
                 <h4>Proxima camada</h4>
-                <p><strong>Camada 3 — Confiabilidade:</strong> Hooks deterministicos, validacao com retry, erros estruturados e gerenciamento de contexto.</p>
+                <p><strong>Camada 3 â€” Confiabilidade:</strong> Hooks deterministicos, validacao com retry, erros estruturados e gerenciamento de contexto.</p>
               </div>
               <a href="../camada-3/index.html" class="btn btn-secondary">
                 Camada 3
@@ -496,10 +496,10 @@
         <div class="bottom-nav">
           <a href="../camada-1/index.html">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-            Camada 1 — Fundamentos
+            Camada 1 â€” Fundamentos
           </a>
           <a href="../camada-3/index.html">
-            Camada 3 — Confiabilidade
+            Camada 3 â€” Confiabilidade
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </div>
